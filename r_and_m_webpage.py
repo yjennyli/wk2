@@ -17,6 +17,8 @@ html_content = """
     <title>Rick and Morty Characters</title>
 </head>
 <body>
+
+        <main>
 """
 
 
@@ -36,7 +38,6 @@ html_content = """
 
 for char in data["results"]:
     html_content += f"""
-    <main>
     <div>
         <h1>Derived from The Rick and Morty API</h1>
         <h2>{char['name']}</h2>  
@@ -50,7 +51,6 @@ for char in data["results"]:
         </ul>
     </div>
         Recorded on <strong>2017-11-04</strong>
-        </main>
         <footer>
          <p><a href="{char['url']}">See more {char['name']} details here!</a></p>
          </footer>
@@ -59,6 +59,7 @@ for char in data["results"]:
 
 
 html_content += """
+    </main>
 </body>
 </html>
 """
